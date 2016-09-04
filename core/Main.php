@@ -13,7 +13,8 @@ class Main
      */
     public static function run()
     {
-        echo 'run';
+        $route = new \core\lib\Route();
+        var_dump($route);
     }
 
 }
