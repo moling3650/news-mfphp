@@ -5,6 +5,8 @@
  */
 // 定义项目常量
 define('BASE_DIR', __DIR__);
+define('CONFIG_DIR', BASE_DIR . '/core/config');
+
 define('DEBUG', true);
 
 // 开启或关闭debug模式

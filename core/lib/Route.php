@@ -5,6 +5,8 @@
  */
 namespace core\lib;
 
+use \core\lib\Conf;
+
 class Route
 {
     /**
@@ -29,7 +31,7 @@ class Route
         }
 
         $patharr = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
-        $this->controller = !empty($patharr[0]) ? $patharr[0] : 'Home';
-        $this->action = !empty($patharr[1]) ? $patharr[1] : 'index';
+        $this->controller = !empty($patharr[0]) ? $patharr[0] : Conf::get('route', 'CONTROLLER');
+        $this->action = !empty($patharr[1]) ? $patharr[1] : Conf::get('route', 'ACTION');
     }
 }
