@@ -14,7 +14,10 @@ class Main
     public static function run()
     {
         $route = new \core\lib\Route();
-        var_dump($route);
+        $Controller = '\app\Controller\\' . $route->controller;
+        $action = $route->action;
+        $controller = new $Controller();
+        $controller->$action();
     }
 
 }

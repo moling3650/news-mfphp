@@ -29,7 +29,7 @@ class Route
         }
 
         $patharr = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
-        $this->controller = !empty($patharr[0]) ? $patharr[0] : 'Index';
+        $this->controller = !empty($patharr[0]) ? $patharr[0] : 'Home';
         $this->action = !empty($patharr[1]) ? $patharr[1] : 'index';
     }
 }
