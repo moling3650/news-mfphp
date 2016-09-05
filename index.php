@@ -5,7 +5,7 @@
  */
 // 定义项目常量
 define('BASE_DIR', __DIR__);
-define('CONFIG_DIR', BASE_DIR . '/core/config');
+define('CONFIG_DIR', BASE_DIR . '/core/configs');
 
 define('DEBUG', true);
 

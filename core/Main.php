@@ -5,6 +5,9 @@
  */
 namespace core;
 
+use core\lib\Route;
+use core\lib\Factory;
+
 class Main
 {
     /**
@@ -13,11 +16,8 @@ class Main
      */
     public static function run()
     {
-        $route = new \core\lib\Route();
-        $Controller = '\app\Controller\\' . $route->controller;
+        $route = new Route();
         $action = $route->action;
-        $controller = new $Controller();
-        $controller->$action();
+        Factory::getController($route->controller)->$action();
     }
-
 }

@@ -11,13 +11,13 @@ class Route
 {
     /**
      * 控制器名
-     * @var string
+     * @var string $controller
      */
     public $controller;
 
     /**
      * 控制器的行为
-     * @var string
+     * @var string $action
      */
     public $action;
 
