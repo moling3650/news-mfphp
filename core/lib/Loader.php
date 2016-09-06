@@ -17,8 +17,10 @@ class Loader
     {
         $file = BASE_DIR . '/' . str_replace('\\', '/', $class) . '.php';
 
-        if (file_exists($file)) {
+        if (is_file($file)) {
             require $file;
+        } else if (DEBUG) {
+            throw new \Exception('没有找到文件： ' . $file);
         }
     }
 }
