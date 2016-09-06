@@ -4,11 +4,12 @@
     "type": "app",
     "keyword": [
         "PHP",
+        "Web app"
     ],
     "require": {
         "php": ">= 5.5.0",
         "filp/whoops": "*",
-        "symfony/var-dumper": "*",
+        "symfony/var-dumper": "*"
     },
     "repositories": {
         "packagist": {
