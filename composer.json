@@ -1,0 +1,19 @@
+{
+    "name": "news-mfphp",
+    "description": "a web app by php",
+    "type": "app",
+    "keyword": [
+        "PHP",
+    ],
+    "require": {
+        "php": ">= 5.5.0",
+        "filp/whoops": "*",
+        "symfony/var-dumper": "*",
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
