@@ -5,10 +5,15 @@
  */
 namespace app\Controller;
 
+use core\lib\Database;
+
 class Home
 {
     public function index()
     {
         echo "hello world!";
+        $db = new Database('localhost', 'root', 'test', 'test');
+        $db->select('guestbook');
     }
+
 }
