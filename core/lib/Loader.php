@@ -19,7 +19,7 @@ class Loader
 
         if (is_file($file)) {
             require $file;
-        } else if (DEBUG) {
+        } elseif (DEBUG) {
             throw new \Exception('没有找到文件： ' . $file);
         }
     }
