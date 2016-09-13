@@ -8,22 +8,15 @@ namespace core\lib;
 class Database
 {
     protected $db;
-    public function __construct($host, $uesr, $password, $dbname, $type='MySQLi')
+    public function __construct($host, $uesr, $password, $dbname, $drive='MySQLi')
     {
-        $DB = 'core\lib\Database\\' . $type;
+        $DB = 'core\lib\Database\\' . $drive;
         $this->db = new $DB();
         $this->db->connect($host, $uesr, $password, $dbname);
     }
 
-    public function select($table)
+    public function test($sql)
     {
-        $sql = "SELECT * FROM `$table`;";
-
-        $result_set = $this->db->query($sql);
-        if ($result_set) {
-            return $result_set->fetch_all(MYSQLI_ASSOC);
-        } else {
-            die('查询失败');
-        }
+        return $this->db->query($sql);
     }
 }

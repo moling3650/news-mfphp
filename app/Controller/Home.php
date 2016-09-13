@@ -11,9 +11,9 @@ class Home
 {
     public function index()
     {
-        echo "hello world!";
+        echo "hello world!<hr>";
         $db = new Database('localhost', 'root', 'test', 'test');
-        $db->select('guestbook');
+        dump($db->test('SHOW TABLES;'));
     }
 
 }
