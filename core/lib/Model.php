@@ -7,10 +7,10 @@ namespace core\lib;
 
 use core\lib\Conf;
 
-class Model
+abstract class Model
 {
     protected $db;
-    private $table = 'guestbook';
+    protected $table;
     public function __construct()
     {
         extract(Conf::get('database'));
@@ -20,7 +20,7 @@ class Model
     }
 
     /**
-     * SELECT查询
+     * SELECT 查询数据
      * @param  mixed  $fields 选择的列，可以是字符串或字符串的数组
      * @param  string $where  筛选的条件
      * @return array          返回选择的结果集
@@ -58,7 +58,7 @@ class Model
     }
 
     /**
-     * UPDATE 一行数据
+     * UPDATE 更新一行数据
      * @param  mixed $id   主键：字符串或整数
      * @param  array $data 要更新的数据
      * @return int         影响的行数
@@ -74,7 +74,7 @@ class Model
     }
 
     /**
-     * DELETE 一行数据
+     * DELETE 删除一行数据
      * @param  mixed $id 主键：字符串或整数
      * @return int       影响的行数
      */

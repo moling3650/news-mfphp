@@ -5,14 +5,15 @@
  */
 namespace app\Controller;
 
-use core\lib\Model;
+use app\Model\Guestbook;
+
 
 class Home
 {
     public function index()
     {
         echo "hello world!<hr>";
-        $model = new Model();
+        $model = new Guestbook();
         dump($model->insert([
             'title' => 'insert test2',
             'content' => 'test2',
@@ -22,7 +23,8 @@ class Home
                 'title' => 'update test',
                 'content' => 'test15',
             ]));
-        dump($model->delete('22'));
+        dump($model->delete('27'));
         dump($model->select('*', '`id` >= 15'));
+
     }
 }
