@@ -13,6 +13,10 @@ class Home
     public function index()
     {
         echo "hello world!<hr>";
+    }
+
+    public function test_db()
+    {
         $model = new Guestbook();
         dump($model->insert([
             'title' => 'insert test2',
@@ -25,6 +29,5 @@ class Home
             ]));
         dump($model->delete('27'));
         dump($model->select('*', '`id` >= 15'));
-
     }
 }

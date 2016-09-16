@@ -3,9 +3,9 @@
  * @authors moling (365024424@qq.com)
  * @date    2016-09-12 19:40:35
  */
-namespace core\lib\Database;
+namespace core\lib\drive\database;
 
-use core\lib\Database\InterfaceDB;
+use core\lib\drive\interfaceDB;
 
 class MySQLi implements InterfaceDB
 {

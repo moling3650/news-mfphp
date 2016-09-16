@@ -14,7 +14,7 @@ abstract class Model
     public function __construct()
     {
         extract(Conf::get('database'));
-        $DB = 'core\lib\Database\\' . $drive;
+        $DB = 'core\lib\drive\database\\' . $drive;
         $this->db = new $DB();
         $this->db->connect($host, $uesr, $password, $dbname);
     }
