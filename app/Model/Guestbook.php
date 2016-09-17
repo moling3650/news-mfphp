@@ -5,9 +5,9 @@
  */
 namespace app\Model;
 
-use core\lib\Model;
+use core\lib\ModelMedoo;
 
-class Guestbook extends Model
+class Guestbook extends ModelMedoo
 {
     protected $table = 'guestbook';
 }

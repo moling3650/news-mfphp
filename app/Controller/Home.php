@@ -15,6 +15,21 @@ class Home
         echo "hello world!<hr>";
     }
 
+    public function test_medoo()
+    {
+        $model = new Guestbook();
+        $model->delete(['id' => '20 or 1 = 1']);
+        // $model->link->last_query();
+        dump($model->count());
+        dump($model->insert([
+                'title' => 'medoo',
+                'content' => 'test',
+                'create_at' => time()
+            ]));
+        dump($model->select());
+
+    }
+
     public function test_db()
     {
         $model = new Guestbook();

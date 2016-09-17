@@ -9,7 +9,8 @@
     "require": {
         "php": ">= 5.5.0",
         "filp/whoops": "*",
-        "symfony/var-dumper": "*"
+        "symfony/var-dumper": "*",
+        "catfan/Medoo": ">= 1.1"
     },
     "repositories": {
         "packagist": {
