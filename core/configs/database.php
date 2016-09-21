@@ -8,5 +8,14 @@ return [
     'uesr' => 'root',
     'password' => 'test',
     'dbname' => 'test',
-    'drive' => 'MySQLi'
+    'drive' => 'MySQLi',
+
+    'medoo' => [
+                'database_type' => 'mysql',
+                'database_name' => 'test',
+                'server' => 'localhost',
+                'username' => 'root',
+                'password' => 'test',
+                'charset' => 'utf8'
+            ]
 ];

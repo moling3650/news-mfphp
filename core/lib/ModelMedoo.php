@@ -5,20 +5,15 @@
  */
 namespace core\lib;
 
+use core\lib\Conf;
+
 abstract class ModelMedoo
 {
     public $link;
     protected $table;
     public function __construct()
     {
-        $this->link = new \medoo([
-                'database_type' => 'mysql',
-                'database_name' => 'test',
-                'server' => 'localhost',
-                'username' => 'root',
-                'password' => 'test',
-                'charset' => 'utf8'
-            ]);
+        $this->link = new \medoo(Conf::get('database', 'medoo'));
     }
 
     /**
